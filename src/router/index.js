@@ -8,8 +8,8 @@ import Logout from "../views/Logout.vue";
 
 
 import EventsIndex from '../views/EventsIndex.vue';
+import EventsShow from '../views/EventsShow.vue';
 import EventsNew from '../views/EventsNew.vue';
-
 
 
 
@@ -23,6 +23,10 @@ const routes = [
   { path: '/signup', name: 'signup', component: Signup },
   { path: '/login', name: 'login', component: Login },
   { path: '/logout', name: 'logout', component: Logout },
+
+  { path: '/events-show', name: 'events-show', component: EventsShow }
+
+
 
 
 ]
