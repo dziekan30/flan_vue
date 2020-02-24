@@ -8,6 +8,7 @@ import Logout from "../views/Logout.vue";
 
 
 import EventsIndex from '../views/EventsIndex.vue';
+import EventsNew from '../views/EventsNew.vue';
 
 
 
@@ -17,6 +18,7 @@ Vue.use(VueRouter)
 const routes = [
   { path: '/', name: 'home', component: Home },
   { path: '/events', name: 'events-index', component: EventsIndex },
+  { path: '/events/new', name: 'events-new', component: EventsNew },
 
   { path: '/signup', name: 'signup', component: Signup },
   { path: '/login', name: 'login', component: Login },
