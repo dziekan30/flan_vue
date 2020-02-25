@@ -12,8 +12,6 @@ import EventsShow from '../views/EventsShow.vue';
 import EventsNew from '../views/EventsNew.vue';
 import EventsEdit from '../views/EventsEdit.vue';
 
-
-
 Vue.use(VueRouter)
 
 const routes = [
