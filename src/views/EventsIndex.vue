@@ -2,7 +2,7 @@
   <div class="events-index">
     <h1>All Events</h1>
     <div v-for="event in events">
-      <router-link v-bind:to="'/events' + event.id">
+      <router-link v-bind:to="'/events/' + event.id">
         <h2> {{ event.name }}</h2>
       </router-link>
       <h2>{{event.description}}</h2>

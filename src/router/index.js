@@ -10,25 +10,22 @@ import Logout from "../views/Logout.vue";
 import EventsIndex from '../views/EventsIndex.vue';
 import EventsShow from '../views/EventsShow.vue';
 import EventsNew from '../views/EventsNew.vue';
+import EventsEdit from '../views/EventsEdit.vue';
 
 
 
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/', name: 'home', component: Home },
-  { path: '/events', name: 'events-index', component: EventsIndex },
+  { path: '/', name: 'root', component: EventsIndex },
   { path: '/events/new', name: 'events-new', component: EventsNew },
+  { path: '/events/:id/edit', name: 'events-edit', component: EventsEdit },
 
   { path: '/signup', name: 'signup', component: Signup },
   { path: '/login', name: 'login', component: Login },
   { path: '/logout', name: 'logout', component: Logout },
 
-  { path: '/events-show', name: 'events-show', component: EventsShow }
-
-
-
-
+  { path: '/events/:id', name: 'events-show', component: EventsShow },
 ]
 
 const router = new VueRouter({
