@@ -21,6 +21,8 @@
       <div>End Time: 
         <input type="text" v-model="endTime">
       </div>
+
+      <input type="submit" class="btn btn-primary" value="Create Event">
     </form>
 
   </div>
@@ -61,6 +63,6 @@ export default {
         this.errors = error.response.data.errors;
       });
     }
-  };
+  }
 };
 </script>
