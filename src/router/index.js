@@ -11,8 +11,12 @@ import EventsIndex from '../views/EventsIndex.vue';
 import EventsShow from '../views/EventsShow.vue';
 import EventsNew from '../views/EventsNew.vue';
 
+// Datetimepicker components: 
+import { Datetime } from 'vue-datetime'
+// You need a specific loader for CSS files
+import 'vue-datetime/dist/vue-datetime.css'
 
-
+Vue.use(Datetime)
 Vue.use(VueRouter)
 
 const routes = [

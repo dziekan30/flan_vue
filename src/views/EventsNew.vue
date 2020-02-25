@@ -1,4 +1,5 @@
 <template>
+  
   <div class="events-new">
     <h1>New Event</h1>
     <ul>
@@ -21,7 +22,6 @@
       <div>End Time: 
         <input type="text" v-model="endTime">
       </div>
-
       <input type="submit" class="btn btn-primary" value="Create Event">
     </form>
 
@@ -29,6 +29,9 @@
 </template>
 
 <style>
+  <link rel="stylesheet" href="vue-datetime.css">
+  <datetime v-model="date"></datetime>
+  </link>
 </style>
 
 <script>
@@ -66,3 +69,9 @@ export default {
   }
 };
 </script>
+
+<!-- Datetimepicker components -->
+<script src="vue.js"></script>
+<script src="luxon.js"></script>
+<script src="weekstart.js"></script>
+<script src="vue-datetime.js"></script>
