@@ -16,11 +16,49 @@
       <div>Description: 
         <input type="text" v-model="description">
       </div>
-      <div>Start Time: 
-        <input type="text" v-model="startTime">
+      <div>
+        <datetime 
+          type="datetime"
+          v-model="startTime" 
+          input-id="startDate"
+          :format="{ year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZoneName: 'short' }"
+          :minute-step="15"
+          use12-hour
+          auto
+          >
+          <label for="startDate" slot="before">Start Time</label>
+          <span class="description" slot="after"></span>
+          <template slot="button-cancel">
+            <!-- <fa :icon="['far', 'times']"></fa> -->
+            Cancel
+          </template>
+          <template slot="button-confirm">
+            <!-- <fa :icon="['fas', 'check-circle']"></fa> -->
+            Confirm
+          </template>
+        </datetime>
       </div>
-      <div>End Time: 
-        <input type="text" v-model="endTime">
+      <div>
+        <datetime
+          type="datetime"
+          v-model="endTime" 
+          input-id="endDate"
+          :format="{ year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZoneName: 'short' }"
+          :minute-step="15"
+          use12-hour
+          auto
+          >
+          <label for="endDate" slot="before">End Time</label>
+          <span class="description" slot="after"></span>
+          <template slot="button-cancel">
+            <!-- <fa :icon="['far', 'times']"></fa> -->
+            Cancel
+          </template>
+          <template slot="button-confirm">
+            <!-- <fa :icon="['fas', 'check-circle']"></fa> -->
+            Confirm
+          </template>
+        </datetime>
       </div>
       <input type="submit" class="btn btn-primary" value="Create Event">
     </form>
@@ -28,14 +66,11 @@
   </div>
 </template>
 
-<style>
-  <link rel="stylesheet" href="vue-datetime.css">
-  <datetime v-model="date"></datetime>
-  </link>
-</style>
+<style></style>
 
 <script>
 var axios = require("axios");
+import { Datetime } from 'vue-datetime';
 
 export default {
   data: function() {
@@ -49,6 +84,9 @@ export default {
     };
   },
   created: function() {},
+  components: {
+    datetime: Datetime
+  },
   methods: {
     createEvent: function() {
       var clientParams = {
@@ -70,8 +108,6 @@ export default {
 };
 </script>
 
+
+
 <!-- Datetimepicker components -->
-<script src="vue.js"></script>
-<script src="luxon.js"></script>
-<script src="weekstart.js"></script>
-<script src="vue-datetime.js"></script>
