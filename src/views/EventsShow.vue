@@ -2,6 +2,12 @@
   <div class="events-show">
     <div class="container">
       <h2> {{event.name}}</h2>
+      
+      <h4>Location: {{event.location}}</h4>
+      <h4>Description: {{event.description}}</h4>
+      <h4>Start Time: {{event.start_time}}</h4>
+      <h4>End Time: {{event.end_time}}</h4>
+      
 
       <router-link v-bind:to="'/events/' + event.id + '/edit'">Update</router-link>
       <div>
@@ -24,7 +30,7 @@ export default {
         name: "",
         location: "",
         description: "",
-        start_time: "",
+        start_timime: "",
         end_time: ""
       }
     };

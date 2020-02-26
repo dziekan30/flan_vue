@@ -20,11 +20,49 @@
         </div>
 
         <div>
-          Start Time: <input type="text" v-model="event.startTime">
+          <datetime 
+            type="datetime"
+            v-model="startTime" 
+            input-id="startDate"
+            :format="{ year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZoneName: 'short' }"
+            :minute-step="15"
+            use12-hour
+            auto
+            >
+            <label for="startDate" slot="before">Start Time</label>
+            <span class="description" slot="after"></span>
+            <template slot="button-cancel">
+              <font-awesome-icon :icon="['fas', 'frown-open']" />
+              Cancel
+            </template>
+            <template slot="button-confirm">
+              <font-awesome-icon :icon="['fas', 'check-circle']" />
+              Confirm
+            </template>
+          </datetime>
         </div>
-
         <div>
-          End Time: <input type="text" v-model="event.endTime">
+          <datetime
+            type="datetime"
+            v-model="endTime" 
+            input-id="endDate"
+            :format="{ year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZoneName: 'short' }"
+            :minute-step="15"
+            use12-hour
+            auto
+            >
+            <label for="endDate" slot="before">End Time</label>
+            <span class="description" slot="after"></span>
+            <template slot="button-cancel">
+              <font-awesome-icon :icon="['fas', 'frown-open']" />
+              Cancel
+            </template>
+            <template slot="button-confirm">
+              <!-- <fa :icon="['fas', 'check-circle']"></fa> -->
+              <font-awesome-icon :icon="['fas', 'check-circle']" />
+              Confirm
+            </template>
+          </datetime>
         </div>
 
         <div>
@@ -41,6 +79,8 @@
 
 <script>
 var axios = require('axios');
+import { Datetime } from 'vue-datetime';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 export default {
   data: function() {
@@ -61,6 +101,10 @@ export default {
     .then(response => {
       this.event = response.data;
     });
+  },
+  components: {
+    datetime: Datetime,
+    "font-awesome-icon": FontAwesomeIcon
   },
   methods: {
     updateEvent: function() {

@@ -4,17 +4,18 @@ import router from './router';
 import axios from "axios";
 import { Datetime } from 'vue-datetime';
 // You need a specific loader for CSS files
-import 'vue-datetime/dist/vue-datetime.css';
+import 'vue-datetime/dist/vue-datetime.css/';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faUserSecret } from '@fortawesome/free-solid-svg-icons';
+import { faFrownOpen } from '@fortawesome/free-solid-svg-icons';
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
-library.add(faUserSecret)
+library.add(faFrownOpen, faCheckCircle )
 
 Vue.use(Datetime);
 Vue.component('datetime', Datetime);
-Vue.component('font-awesome-icon', FontAwesomeIcon);
+// Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 
 axios.defaults.baseURL = 
