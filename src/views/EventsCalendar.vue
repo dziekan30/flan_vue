@@ -72,7 +72,7 @@
     data(){
       var today =  new Date(),nowMonth = today.getMonth(),nowYear = today.getFullYear()
       return {
-        prevYears: 10,  // number of years before current date
+        prevYears: 10,
         futureYears: 10,
         nowMonth,
         nowYear,
