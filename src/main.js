@@ -6,6 +6,9 @@ import { Datetime } from 'vue-datetime';
 // You need a specific loader for CSS files
 import 'vue-datetime/dist/vue-datetime.css/';
 
+import "bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faFrownOpen } from '@fortawesome/free-solid-svg-icons';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
