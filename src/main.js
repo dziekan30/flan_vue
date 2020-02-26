@@ -15,7 +15,7 @@ library.add(faFrownOpen, faCheckCircle )
 
 Vue.use(Datetime);
 Vue.component('datetime', Datetime);
-// Vue.component('font-awesome-icon', FontAwesomeIcon);
+
 
 
 axios.defaults.baseURL = 
