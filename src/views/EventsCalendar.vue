@@ -87,12 +87,44 @@
         daysArray: ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
       }  
     },
-    mounted(){
+    mounted() {
     
       this.eventsArray.push(this.newEvent(25,12,2019,"Christmas Day","Annual"));
-      this.eventsArray.push(this.newEvent(27,2,2020, "Meeting"));
-      this.eventsArray.push(this.newEvent(27,2,2020, "pie day"));
-      this.eventsArray.push(this.newEvent(27,2,2020, "my day"));
+      this.eventsArray.push(this.newEvent(24,12,2019,"Christmas Eve","Annual"));
+      this.eventsArray.push(this.newEvent(31,12,2019,"New Years Eve","Annual"));
+      this.eventsArray.push(this.newEvent(1,1,2019,"New Years","Annual"));
+      this.eventsArray.push(this.newEvent(20,1,2020, "Martin Luther King Day"));
+      this.eventsArray.push(this.newEvent(14,2,2020, "Valentine's Day"));
+      this.eventsArray.push(this.newEvent(17,2,2020, "President's Day"));
+      this.eventsArray.push(this.newEvent(22,2,2020, "George Washington's Birthday"));
+      this.eventsArray.push(this.newEvent(26,2,2020, "Ash Wednesday"));
+      this.eventsArray.push(this.newEvent(8,3,2020, "International Women's Day"));
+      this.eventsArray.push(this.newEvent(17,3,2020, "Saint Patrick's Day"));
+      this.eventsArray.push(this.newEvent(19,3,2020, "Spring Vernal Equinox"));
+      this.eventsArray.push(this.newEvent(20,3,2020, "International Earth Day"));
+      this.eventsArray.push(this.newEvent(1,4,2020, "April Fools Day"));
+      this.eventsArray.push(this.newEvent(15,4,2020, "Income taxes due"));
+      this.eventsArray.push(this.newEvent(4,5,2020, "Star Wars Day"));
+      this.eventsArray.push(this.newEvent(5,5,2020, "Cinco de Mayo Day"));
+      this.eventsArray.push(this.newEvent(10,5,2020, "Mother's Day"));
+      this.eventsArray.push(this.newEvent(25,5,2020, "Memorial Day"));
+      this.eventsArray.push(this.newEvent(14,6,2020, "American Flag Day"));
+      this.eventsArray.push(this.newEvent(19,6,2020, "Juneteenth Day"));
+      this.eventsArray.push(this.newEvent(21,6,2020, "Father's Dayy"));
+      this.eventsArray.push(this.newEvent(4,7,2020, "Independence Day"));
+      this.eventsArray.push(this.newEvent(5,7,2020, "National Bikini Day"));
+      this.eventsArray.push(this.newEvent(24,7,2020, "Summer Olympics begins"));
+      this.eventsArray.push(this.newEvent(2,9,2020, "VJ Day, WWII"));
+      this.eventsArray.push(this.newEvent(17,9,2020, "Constitution Day"));
+      this.eventsArray.push(this.newEvent(21,9,2020, "International Peace Day (UN)"));
+      this.eventsArray.push(this.newEvent(25,9,2020, "Native American Day"));
+      this.eventsArray.push(this.newEvent(1,10,2020, "International Day for the Elderly"));
+      this.eventsArray.push(this.newEvent(12,10,2020, "Columbus Day"));
+      this.eventsArray.push(this.newEvent(16,10,2020, "Boss's Day"));
+      this.eventsArray.push(this.newEvent(31,10,2020, "Halloween"));
+      this.eventsArray.push(this.newEvent(11,11,2020, "Veteran's Day"));
+      this.eventsArray.push(this.newEvent(26,11,2020, "Thanksgiving Day"));
+      this.eventsArray.push(this.newEvent(7,12,2020, "Pearl Harbor Day"));
       
     },
     methods: {
