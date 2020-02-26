@@ -6,6 +6,7 @@
       <router-link to="/login">Login</router-link> |
       <router-link to="/logout">Logout</router-link> |
       <router-link to="/events/new">Create</router-link> |
+      <router-link to="/calendar">Calendar</router-link> |
 
     </div>
     <router-view/>
