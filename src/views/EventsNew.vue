@@ -29,11 +29,11 @@
           <label for="startDate" slot="before">Start Time</label>
           <span class="description" slot="after"></span>
           <template slot="button-cancel">
-            <!-- <fa :icon="['far', 'times']"></fa> -->
+            <font-awesome-icon :icon="['fas', 'frown-open']" />
             Cancel
           </template>
           <template slot="button-confirm">
-            <!-- <fa :icon="['fas', 'check-circle']"></fa> -->
+            <font-awesome-icon :icon="['fas', 'check-circle']" />
             Confirm
           </template>
         </datetime>
@@ -51,11 +51,12 @@
           <label for="endDate" slot="before">End Time</label>
           <span class="description" slot="after"></span>
           <template slot="button-cancel">
-            <!-- <fa :icon="['far', 'times']"></fa> -->
+            <font-awesome-icon :icon="['fas', 'frown-open']" />
             Cancel
           </template>
           <template slot="button-confirm">
             <!-- <fa :icon="['fas', 'check-circle']"></fa> -->
+            <font-awesome-icon :icon="['fas', 'check-circle']" />
             Confirm
           </template>
         </datetime>
@@ -71,6 +72,7 @@
 <script>
 var axios = require("axios");
 import { Datetime } from 'vue-datetime';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 export default {
   data: function() {
@@ -85,7 +87,8 @@ export default {
   },
   created: function() {},
   components: {
-    datetime: Datetime
+    datetime: Datetime,
+    "font-awesome-icon": FontAwesomeIcon
   },
   methods: {
     createEvent: function() {
