@@ -102,7 +102,7 @@ export default {
       axios
       .post("/api/events", clientParams)
       .then(response => {
-        this.$router.push("/events");
+        this.$router.push("/calendar");
       }).catch(error => {
         this.errors = error.response.data.errors;
       });

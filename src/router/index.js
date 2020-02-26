@@ -11,6 +11,7 @@ import EventsIndex from '../views/EventsIndex.vue';
 import EventsShow from '../views/EventsShow.vue';
 import EventsNew from '../views/EventsNew.vue';
 import EventsEdit from '../views/EventsEdit.vue';
+import EventsCalendar from '../views/EventsCalendar.vue'
 
 Vue.use(VueRouter)
 
@@ -24,6 +25,8 @@ const routes = [
   { path: '/logout', name: 'logout', component: Logout },
 
   { path: '/events/:id', name: 'events-show', component: EventsShow },
+  { path: '/calendar', name: 'calendar', component: EventsCalendar },
+
 ]
 
 const router = new VueRouter({
