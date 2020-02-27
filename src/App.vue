@@ -1,14 +1,14 @@
 <template>
   <div id="app">
 
-    <div class="jumbotron text-center">
+    <div class="jumbotron text-center" font-size="5rem">
       <h1>FroYo</h1>
       <p>Clear Your Calendar</p>
     </div>
 
     <div class="container-fluid my-nav-container">
      <nav class="navbar navbar-expand-lg">
-      <router-link class="navbar-brand" to="/">Home</router-link>
+  
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -43,6 +43,9 @@
 </template>
 
 <style>
+  body{
+    background-image: url("/cork-board.png");
+  }
   .container-fluid.my-nav-container {
     background-color: #23587d;
   }
@@ -51,6 +54,7 @@
   }
 
   .jumbotron {
+    font-size: 5rem;
     background-color: #23587d; 
     color: #20c997;
   }

@@ -8,15 +8,15 @@
         </ul>
 
         <div>
-          Name: <input type="text" v-model="event.name">
+          Name: <input type="text" class="form-control" v-model="event.name">
         </div>
 
         <div>
-          Location: <input type="text" v-model="event.location">
+          Location: <input type="text" class="form-control" v-model="event.location">
         </div>
 
         <div>
-          Description: <input type="text" v-model="event.description">
+          Description: <input type="text" class="form-control" v-model="event.description">
         </div>
 
         <div>Need a little extra time?
@@ -75,7 +75,7 @@
         </div>
 
         <div>
-          <input type="submit" value="Edit Event">
+          <input type="submit" class="btn btn-primary" value="Edit Event">
         </div>
 
       </form> 

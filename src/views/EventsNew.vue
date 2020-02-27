@@ -1,5 +1,22 @@
 <template>
   
+
+<!--   <form v-on:submit.prevent="submit()">
+    <h1>Login</h1>
+    <ul>
+      <li class="text-danger" v-for="error in errors">{{ error }}</li>
+    </ul>
+    <div class="form-group">
+      <label>Email:</label>
+      <input type="email" class="form-control" v-model="email">
+    </div>
+    <div class="form-group">
+      <label>Password:</label>
+      <input type="password" class="form-control" v-model="password">
+    </div>
+    <input type="submit" class="btn btn-primary" value="Submit">
+  </form> -->
+
   <div class="events-new">
     <h1>New Event</h1>
     <ul>
@@ -7,69 +24,71 @@
     </ul>
 
     <form v-on:submit.prevent="createEvent()">
-      <div>Name: 
-        <input type="text" v-model="name">
-      </div>
-      <div>Location: 
-        <input type="text" v-model="location">
-      </div>
-      <div>Description: 
-        <input type="text" v-model="description">
-      </div>
-      <div>Need a little extra time?
-        <input
-          type="checkbox"
-          v-model="buffer"
-          true-value="true"
-          false-value="false"
-        >
-      </div>
-      <div>
-        <datetime 
-          type="datetime"
-          v-model="startTime" 
-          input-id="startDate"
-          :format="{ year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZoneName: 'short' }"
-          :minute-step="15"
-          use12-hour
-          auto
+      <div class="form-group">
+        <div>Name: 
+          <input type="text" class="form-control" v-model="name">
+        </div>
+        <div>Location: 
+          <input type="text" class="form-control" v-model="location">
+        </div>
+        <div>Description: 
+          <input type="text" class="form-control" v-model="description">
+        </div>
+        <div>Need a little extra time?
+          <input
+            type="checkbox"
+            v-model="buffer"
+            true-value="true"
+            false-value="false"
           >
-          <label for="startDate" slot="before">Start Time</label>
-          <span class="description" slot="after"></span>
-          <template slot="button-cancel">
-            <font-awesome-icon :icon="['fas', 'frown-open']" />
-            Cancel
-          </template>
-          <template slot="button-confirm">
-            <font-awesome-icon :icon="['fas', 'check-circle']" />
-            Confirm
-          </template>
-        </datetime>
+        </div>
+        <div>
+          <datetime 
+            type="datetime"
+            v-model="startTime" 
+            input-id="startDate"
+            :format="{ year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZoneName: 'short' }"
+            :minute-step="15"
+            use12-hour
+            auto
+            >
+            <label for="startDate" slot="before">Start Time</label>
+            <span class="description" slot="after"></span>
+            <template slot="button-cancel">
+              <font-awesome-icon :icon="['fas', 'frown-open']" />
+              Cancel
+            </template>
+            <template slot="button-confirm">
+              <font-awesome-icon :icon="['fas', 'check-circle']" />
+              Confirm
+            </template>
+          </datetime>
+        </div>
+        <div>
+          <datetime
+            type="datetime"
+            v-model="endTime" 
+            input-id="endDate"
+            :format="{ year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZoneName: 'short' }"
+            :minute-step="15"
+            use12-hour
+            auto
+            >
+            <label for="endDate" slot="before">End Time</label>
+            <span class="description" slot="after"></span>
+            <template slot="button-cancel">
+              <font-awesome-icon :icon="['fas', 'frown-open']" />
+              Cancel
+            </template>
+            <template slot="button-confirm">
+              <!-- <fa :icon="['fas', 'check-circle']"></fa> -->
+              <font-awesome-icon :icon="['fas', 'check-circle']" />
+              Confirm
+            </template>
+          </datetime>
+        </div>
+        <input type="submit" class="btn btn-primary" value="Create Event">
       </div>
-      <div>
-        <datetime
-          type="datetime"
-          v-model="endTime" 
-          input-id="endDate"
-          :format="{ year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZoneName: 'short' }"
-          :minute-step="15"
-          use12-hour
-          auto
-          >
-          <label for="endDate" slot="before">End Time</label>
-          <span class="description" slot="after"></span>
-          <template slot="button-cancel">
-            <font-awesome-icon :icon="['fas', 'frown-open']" />
-            Cancel
-          </template>
-          <template slot="button-confirm">
-            <!-- <fa :icon="['fas', 'check-circle']"></fa> -->
-            <font-awesome-icon :icon="['fas', 'check-circle']" />
-            Confirm
-          </template>
-        </datetime>
-      </div>
-      <input type="submit" class="btn btn-primary" value="Create Event">
     </form>
 
   </div>
