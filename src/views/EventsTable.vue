@@ -19,9 +19,8 @@
           <td><router-link v-bind:to="'/events/' + event.id">{{ event.name }}</router-link></td>
           <td>{{ event.location }}</td>
           <td>{{ event.description }}</td>
-          <td>{{ event.start_time }}</td>
-          <td>{{ event.end_time }}</td>
-          <!-- <td>{{ relativeDate(event.created_at) }}</td> -->
+          <td>{{ relativeDate(event.start_time) }}</td>
+          <td>{{ relativeDate(event.end_time) }}</td>
         </tr>
       </tbody>
     </table>
@@ -37,7 +36,7 @@
 
 <script>
 var axios = require("axios");
-// import moment from "moment";
+import moment from "moment";
 
 export default {
   data: function() {
@@ -54,9 +53,10 @@ export default {
       });
 
   },
-  // methods: {
-  //   relativeDate: function(date) {
-  //     return moment(date).fromNow();
-  //   },
-  };
+  methods: {
+    relativeDate: function(date) {
+      return moment(date).format('MMMM Do YYYY, h:mm:ss a');
+    }
+  }
+};
 </script>
