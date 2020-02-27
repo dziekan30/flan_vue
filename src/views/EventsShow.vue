@@ -5,8 +5,8 @@
       
       <h4>Location: {{event.location}}</h4>
       <h4>Description: {{event.description}}</h4>
-      <h4>Start Time: {{event.start_time}}</h4>
-      <h4>End Time: {{event.end_time}}</h4>
+      <h4>Start Time: {{relativeDate(event.start_time)}}</h4>
+      <h4>End Time: {{relativeDate(event.start_time)}}</h4>
       
 
       <router-link v-bind:to="'/events/' + event.id + '/edit'">Update</router-link>
@@ -22,6 +22,7 @@
 
 <script>
 var axios = require('axios');
+import moment from "moment";
 
 export default {
   data: function() {
@@ -49,7 +50,10 @@ export default {
         .then(response => {
           this.$router.push("/")
         });
+    },
+    relativeDate: function(date) {
+      return moment(date).format('MMMM Do YYYY, h:mm:ss a');
     }
-  }
+  },
 };
 </script>
