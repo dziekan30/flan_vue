@@ -10,7 +10,7 @@
           <p class="card-text">Start Time: {{relativeDate(event.start_time)}}</p>
           <p class="card-text">End Time{{relativeDate(event.start_time)}}</p>
           <router-link v-bind:to="'/events/' + event.id + '/edit'" class="btn btn-primary">Update</router-link>
-          <input v-on:click="destroyEvent()" class="btn btn-primary" type="submit" value="Delete">
+          <input v-on:click="destroyEvent()" class="btn btn-primary ml-3" type="submit" value="Delete">
         </div>
       </div>
     </div>
