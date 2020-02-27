@@ -1,19 +1,20 @@
 <template>
   <div class="events-show">
+    <br>
     <div class="container">
-      <h2> {{event.name}}</h2>
-      
-      <h4>Location: {{event.location}}</h4>
-      <h4>Description: {{event.description}}</h4>
-      <h4>Start Time: {{relativeDate(event.start_time)}}</h4>
-      <h4>End Time: {{relativeDate(event.start_time)}}</h4>
-      
-
-      <router-link v-bind:to="'/events/' + event.id + '/edit'">Update</router-link>
-      <div>
-       <input v-on:click="destroyEvent()" type="submit" value="Delete">
+      <div class="card">
+        <h5 class="card-header">{{event.name}}</h5>
+        <div class="card-body">
+          <h5 class="card-title">{{event.location}}</h5>
+          <p class="card-text">{{event.description}}</p>
+          <p class="card-text">Start Time: {{relativeDate(event.start_time)}}</p>
+          <p class="card-text">End Time{{relativeDate(event.start_time)}}</p>
+          <router-link v-bind:to="'/events/' + event.id + '/edit'" class="btn btn-primary">Update</router-link>
+          <input v-on:click="destroyEvent()" class="btn btn-primary ml-3" type="submit" value="Delete">
+        </div>
       </div>
     </div>
+    <br>
   </div>
 </template>
 

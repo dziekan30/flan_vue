@@ -17,7 +17,7 @@ import EventsCalendar from '../views/EventsCalendar.vue';
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/', name: 'root', component: EventsIndex },
+  { path: '/', name: 'root', component: Signup },
   { path: '/events/new', name: 'events-new', component: EventsNew },
   { path: '/events/:id/edit', name: 'events-edit', component: EventsEdit },
 
