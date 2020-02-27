@@ -16,6 +16,14 @@
       <div>Description: 
         <input type="text" v-model="description">
       </div>
+      <div>Need a little extra time?
+        <input
+          type="checkbox"
+          v-model="buffer"
+          true-value="true"
+          false-value="false"
+        >
+      </div>
       <div>
         <datetime 
           type="datetime"
@@ -82,6 +90,7 @@ export default {
       description: "",
       startTime: "",
       endTime: "",
+      buffer: "",
       errors: []
     };
   },
@@ -97,7 +106,8 @@ export default {
         location: this.location,
         description: this.description,
         start_time: this.startTime,
-        end_time: this.endTime
+        end_time: this.endTime,
+        buffer: this.buffer,
       };
       axios
       .post("/api/events", clientParams)
