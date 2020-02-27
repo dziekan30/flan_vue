@@ -26,7 +26,7 @@ const routes = [
   { path: '/logout', name: 'logout', component: Logout },
 
   { path: '/events/:id', name: 'events-show', component: EventsShow },
-  { path: '/events/:id/table', name: 'events-table', component: EventsTable},
+  { path: '/table', name: 'events-table', component: EventsTable},
   { path: '/calendar', name: 'calendar', component: EventsCalendar },
 ]
 
