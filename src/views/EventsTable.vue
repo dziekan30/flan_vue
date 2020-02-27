@@ -1,6 +1,6 @@
 <template>
   <div class="events-table">
-    <h1 class="text-center mb-5">Your Scheduled Events</h1>
+    <h1 id="table-heading" class="text-center mb-5">Your Scheduled Events</h1>
 
     <table class="table table-striped">
       <thead class="thead-dark">
@@ -27,6 +27,13 @@
     </table>
   </div>
 </template>
+
+<style>
+  #table-heading {
+    color: #20c997;
+  }
+
+</style>
 
 <script>
 var axios = require("axios");

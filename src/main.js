@@ -1,3 +1,5 @@
+import "bootstrap/dist/css/bootstrap.min.css";
+
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
@@ -7,7 +9,7 @@ import { Datetime } from 'vue-datetime';
 import 'vue-datetime/dist/vue-datetime.css/';
 
 import "bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
+
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faFrownOpen } from '@fortawesome/free-solid-svg-icons';

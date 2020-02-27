@@ -1,7 +1,7 @@
 
 <template>
 
-  <div class="container" id="app">
+  <div class="container">
     <select name="month" v-model="curMonth" @change="getCalendarMonth">
       <option v-for="(month, index) in 12" :value="index">{{monthsArray[index]}}</option>
     </select>
@@ -37,18 +37,18 @@
             <tbody class="tbody-default" data-bind="foreach:gridArray">
               <tr v-for="(item, index) in calendarMatrix">
                 <td v-for="(data, i) in item" :class="{'occassion': data.occassion ? data.occassion : false}"> 
+                    <span   v-on:click="setDate(data.date)" v-bind:class="{'cal-selected':isActive(data.date),'weekend':  !(i%7)||!((i+1)%7)}">
+                      {{data ? data.date.getDate() : ''}}
+                    </span>
                   <div v-for="event in monthEvents">
+                    <router-link class="p-0" :to="'/events/' + event.id">
                     <div v-if="data ? data.date.getDay() == eventsArray[event].day && eventsArray[event].occurrence == 'Weekly' : false">{{eventsArray[event].memo}}{{`${changeOccurrence(index, i)}`}}</div>
                     <div v-else-if="data ? data.date.getDate() == eventsArray[event].day && eventsArray[event].occurrence != 'Weekly': false">
                       {{eventsArray[event].memo}}{{`${changeOccurrence(index, i)}`}}
                     </div>
-                    <div >
-                      
-                    </div>
+                  </router-link>
+
                   </div>
-                  <span   v-on:click="setDate(data.date)" v-bind:class="{'cal-selected':isActive(data.date),'weekend':  !(i%7)||!((i+1)%7)}">
-                    {{data ? data.date.getDate() : ''}}
-                  </span>
                 </td>
               </tr>
               
